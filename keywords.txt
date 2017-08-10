@@ -1,0 +1,25 @@
+#######################################
+# Syntax Coloring Map
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Comando	KEYWORD1
+Pagina	KEYWORD1
+Site	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+definirIP	KEYWORD2
+inserirComando	KEYWORD2
+receberComando	KEYWORD2
+compararComando	KEYWORD2
+inicializar	KEYWORD2	
+temConexao	KEYWORD2
+conectarNaRede	KEYWORD2
+gerarPaginaHTML	KEYWORD2
+definirModoDebug	KEYWORD2
