@@ -44,4 +44,5 @@ class Site{
        void      conectarNaRede(String ssid, String senha); 
        void      gerarPaginaHTML();
        void      definirModoDebug(int modo);
+       void      definirModoRoteador(String ssid, String password, int channel);
 };
