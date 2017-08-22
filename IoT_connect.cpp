@@ -90,6 +90,11 @@ int   Site::temConexao(){
 	return 1;
 	
 } 
+
+void   Site::definirModoRoteador(char* ssid, char* password, int channel){
+	WiFi.setMode(WIFI_AP);
+	WiFi.softAP(ssid,password,channel);
+}
 void   Site::gerarPaginaHTML(){
 	String s="HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n<!DOCTYPE HTML>\r\n";
 	s +="<html>\r\n";
