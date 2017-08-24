@@ -95,9 +95,9 @@ void   Site::definirModoRoteador(char* ssid, char* password, int channel){
 	//WiFi.setMode(WIFI_AP);
 	WiFi.softAP(ssid,password,channel);
 	IPAddress _ip(192,168,channel,1);
-	IPAddress _ms(255,255,255,0;
+	IPAddress _ms(255,255,255,0);
 	IPAddress _gw(192,168,channel,1);
-	WiFi.config(_ip,_gw, _ms);
+	WiFi.softAPConfig(_ip,_gw,_ms);	
 }
 void   Site::gerarPaginaHTML(){
 	String s="HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n<!DOCTYPE HTML>\r\n";
