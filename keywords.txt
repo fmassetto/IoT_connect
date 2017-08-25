@@ -23,4 +23,4 @@ temConexao	KEYWORD2
 conectarNaRede	KEYWORD2
 gerarPaginaHTML	KEYWORD2
 definirModoDebug	KEYWORD2
-definirModoRoteador KEYWORD2
+definirModoRoteador	KEYWORD2

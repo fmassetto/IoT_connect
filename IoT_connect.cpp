@@ -71,6 +71,10 @@ void   Site::conectarNaRede(String ssid, String senha){
 		delay(500);
 		Serial.print(".");
 	}
+	if (modoDebug){
+		Serial.print("IP Atribuido ");
+		Serial.println(WiFi.localIP());
+	}
 }
 
 void  Site::definirModoDebug(int modo){
@@ -98,6 +102,11 @@ void   Site::definirModoRoteador(char* ssid, char* password, int channel){
 	IPAddress _ms(255,255,255,0);
 	IPAddress _gw(192,168,channel,1);
 	WiFi.softAPConfig(_ip,_gw,_ms);	
+	if (modoDebug){
+		Serial.println("Modo Roteador Definido");
+		Serial.print("IP do Roteador ");
+		Serial.print(WiFi.softAPIP());
+	}
 }
 void   Site::gerarPaginaHTML(){
 	String s="HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n<!DOCTYPE HTML>\r\n";
