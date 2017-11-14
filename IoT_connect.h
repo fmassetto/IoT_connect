@@ -32,6 +32,7 @@ class Site{
        int        modoDebug=0;
        int        customMode=0;
        String     corFundoPagina;
+       String     paginaHTML;
 
     public: 
 
