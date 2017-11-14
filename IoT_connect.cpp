@@ -109,6 +109,10 @@ void   Site::definirModoRoteador(char* ssid, char* password, int channel){
 	}
 }
 
+void   Site::definirPaginaHTML(Pagina _pagina){
+	customMode = 1;
+	pagina = _pagina;
+}
 
 void   Site::gerarPaginaHTML(){
 	String s="";
