@@ -30,6 +30,7 @@ class Site{
        String     cabecalho;
        String     rodape;
        int        modoDebug=0;
+       int        customMode=0;
        String     corFundoPagina;
 
     public: 
