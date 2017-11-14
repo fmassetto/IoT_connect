@@ -108,27 +108,35 @@ void   Site::definirModoRoteador(char* ssid, char* password, int channel){
 		Serial.print(WiFi.softAPIP());
 	}
 }
-void   Site::gerarPaginaHTML(){
-	String s="HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n<!DOCTYPE HTML>\r\n";
-	s +="<html>\r\n";
-	s += "<head>\r\n";
-	s +=" <title> .: IoT_Connect :. </title> \r\n";
-	s +=" <style>";
-	s +=" a{background-color:BLUE; color:WHITE; font-size:100px};";
-	s +="";
-	s +="";
-	s +="";
-	s +=" </style>";
-	
-	s += "</head>\r\n";
-	s += "<body>\r\n";
 
-	s += "<h1>Welcome to IoT Connect Library</h1>\r\n";
-	for (int i=0;i<indexBotoes;i++){
-		s+="<a href=\"?"+botoes[i][1]+"\">"+botoes[i][0]+"</a><br/>";
+
+void   Site::gerarPaginaHTML(){
+	String s="";
+	if (customMode){
+	   s = pagina;
 	}
-	s += "</body>\r\n";
-	s +="</html>";
+	else{
+	   s +="HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n<!DOCTYPE HTML>\r\n";
+	   s +="<html>\r\n";
+	   s += "<head>\r\n";
+	   s +=" <title> .: IoT_Connect :. </title> \r\n";
+	   s +=" <style>";
+	   s +=" a{background-color:BLUE; color:WHITE; font-size:100px};";
+	   s +="";
+	   s +="";
+	   s +="";
+	   s +=" </style>";
+	
+	   s += "</head>\r\n";
+	   s += "<body>\r\n";
+
+	   s += "<h1>Welcome to IoT Connect Library</h1>\r\n";
+	   for (int i=0;i<indexBotoes;i++){
+		s+="<a href=\"?"+botoes[i][1]+"\">"+botoes[i][0]+"</a><br/>";
+	   }
+	   s += "</body>\r\n";
+	   s +="</html>";
+	}
 	wifiClient.print(s);
 	wifiClient.flush();
 	wifiClient.stop();
