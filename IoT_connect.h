@@ -45,4 +45,5 @@ class Site{
        void      gerarPaginaHTML();
        void      definirModoDebug(int modo);
        void      definirModoRoteador(char* ssid, char* password, int channel);
+       void      definirPaginaHTML(Pagina pagina);
 };
